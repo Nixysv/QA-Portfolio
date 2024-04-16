@@ -1,0 +1,18 @@
+{
+	"TestCase_id":"1",
+	"Title":"Landing page layout with PIN flow",
+	"Preconditions":"Browser caches/cookies data is cleaned (all period)",
+	"Steps":
+	{
+	"1":"Copy the campaign URL from the admin panel",
+	"2":"Paste the campaign URL into the client's browser address bar"
+	},
+    "Expected result":
+    {
+    "1":"The LP is opened successfully",
+    "2":"All the texts/images are displayed according to the template",
+    "3":"Text and background color match the campaign",
+    "4":"All texts are displayed in the default carrier language",
+    "5":"PIN flow pop up is displayed"
+    }
+}
