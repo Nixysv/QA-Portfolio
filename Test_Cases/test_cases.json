@@ -22,7 +22,7 @@
 	{
 
 	    "1": "Open the sidebar menu by clicking on the Hamburger button in the top left corner.",
-	     "Expected result": "The sidebar menu is displayed",
+	    "Expected result": "The sidebar menu is displayed",
 
 	    "2": "Check the sidebar menu layout",
 	    "Expected result": "All buttons are displayed according to the template",
