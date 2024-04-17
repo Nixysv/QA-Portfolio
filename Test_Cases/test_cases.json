@@ -1,81 +1,61 @@
 {
-	"TestCase_id": "1",
-	"Title": "Landing page layout with PIN flow",
-	"Preconditions": "Browser caches/cookies data is cleaned (all period)",
-	"Steps":
-	{
-		"1": "Copy the campaign URL from the admin panel",
-		"2": "Paste the campaign URL into the client's browser address bar"
-	},
-        "Expected result1": "The LP is opened successfully",
-        "Expected result2": "All the texts/images are displayed according to the template",
-        "Expected result3": "Text and background color match the campaign",
-        "Expected result4": "All texts are displayed in the default carrier language",
-        "Expected result5": "PIN flow pop up is displayed"
-},
-
-{
-	"TestCase_id": "2",
-	"Title": "Sidebar menu layout",
-	"Preconditions": "The user is at the top of the screen on the HP",
-	"Steps":
-	{
-
-	    "1": "Open the sidebar menu by clicking on the Hamburger button in the top left corner.",
-	    "Expected result": "The sidebar menu is displayed",
-
-	    "2": "Check the sidebar menu layout",
-	    "Expected result": "All buttons are displayed according to the template",
-
-	    "3": "Check that all categories are displayed in the default language",
-	    "Expected result": "All categories are displayed in the default language"
-	}
-},
-
-{
-	"TestCase_id": "3",
-	"Title": "[DB] Processes for paid subscription",
-	"Preconditions": "The user has a subscription with a charge",
-	"Steps":
-	{
-		"1": "Open the Billing DataBase",
-		"2": "Open the b_processes table",
-		"3": "Enter client_user or provider_user with MSISDN on the search field",
-		"Expected result": "Entered MSISDN is displayed",
-
-		"4": "Click Enter",
-		"Expected result1": "The Process data about subscribing is displayed",
-		"Expected result2": "Subscription type should be type=subscribe",
-		"Expected result3": "Subscription status=successful",
-
-		"5": "Check the carrier filed",
-		"Expected result": "The carrier ID matches the ID in admin pannel",
-
-		"6": "Check the charge_value field",
-		"Expected result": "The correct charge is displayed",
-
-		"7": "Check the date fields of the process",
-		"Expected result": "Date stamps is current"
-	}
-},
-
-{
-	"TestCase_id": "4",
-	"Title": "[MO] Subscription",
-	"Preconditions": "The user is in the corresponding SMS chat",
-	"Steps":
-	{
-		"1": "Send the special word from SMS to subscribe",
-		"Expected result": "The confirmation subscription SMS is received",
-
-		"2": "Send the confirmation word",
-		"Expected result1": "The welcome SMS with auto-identification link is received",
-		"Expected result2": "Subscribe process is created in b_processes table in DB",
-
-		"3": "Click on the auto-identification link in SMS",
-		"Expected result1": "The auto-identification link is opened in the browser",
-		"Expected result2": "The message “You are subscribed to ...” appeared on the screen",
-		"Expected result3": "Ident process is created in b_processes table in DB"
-	}
+  "Test_Cases": [
+    {
+      "TestCase_id": "1",
+      "Title": "Landing page layout with PIN flow",
+      "Preconditions": "Browser caches/cookies data is cleaned (all period)",
+      "Steps": {
+        "1": "Copy the campaign URL from the admin panel",
+        "2": "Paste the campaign URL into the client's browser address bar"
+      },
+      "Expected result1": "The LP is opened successfully",
+      "Expected result2": "All the texts/images are displayed according to the template",
+      "Expected result3": "Text and background color match the campaign",
+      "Expected result4": "All texts are displayed in the default carrier language",
+      "Expected result5": "PIN flow pop up is displayed"
+    },
+    {
+      "TestCase_id": "2",
+      "Title": "Sidebar menu layout",
+      "Preconditions": "The user is at the top of the screen on the HP",
+      "Steps": {
+        "1": "Open the sidebar menu by clicking on the Hamburger button in the top left corner.",
+        "2": "Check the sidebar menu layout",
+        "3": "Check that all categories are displayed in the default language",
+        "Expected result": "All categories are displayed in the default language"
+      }
+    },
+    {
+      "TestCase_id": "3",
+      "Title": "[DB] Processes for paid subscription",
+      "Preconditions": "The user has a subscription with a charge",
+      "Steps": {
+        "1": "Open the Billing DataBase",
+        "2": "Open the b_processes table",
+        "3": "Enter client_user or provider_user with MSISDN on the search field",
+        "4": "Click Enter",
+        "5": "Check the carrier filed",
+        "6": "Check the charge_value field",
+        "7": "Check the date fields of the process",
+        "Expected result": "Date stamps is current",
+        "Expected result1": "The Process data about subscribing is displayed",
+        "Expected result2": "Subscription type should be type=subscribe",
+        "Expected result3": "Subscription status=successful"
+      }
+    },
+    {
+      "TestCase_id": "4",
+      "Title": "[MO] Subscription",
+      "Preconditions": "The user is in the corresponding SMS chat",
+      "Steps": {
+        "1": "Send the special word from SMS to subscribe",
+        "2": "Send the confirmation word",
+        "3": "Click on the auto-identification link in SMS",
+        "Expected result": "The confirmation subscription SMS is received",
+        "Expected result1": "The auto-identification link is opened in the browser",
+        "Expected result2": "The message “You are subscribed to ...” appeared on the screen",
+        "Expected result3": "Ident process is created in b_processes table in DB"
+      }
+    }
+  ]
 }
-
