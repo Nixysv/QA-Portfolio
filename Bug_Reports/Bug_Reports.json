@@ -1,93 +1,85 @@
 {
-	"Bug_id": "1",
-	"Summary": "[PROD] The error pop up is displayed on the Home Page after the Confirm button is clicked",
-	"Priority": "High",
-	"Severity": "Blocker",
-	"Environment": "The issue was found on the STAGE, but reproduced on the PROD",
-	"Preconditions":
-	{
-		"1": "Browser caches/ cookies are cleared, user is deleted from DB and billing",
-		"2": "3G connection is used"
-	},
-	"Steps to reproduce":
-	{
-		"1": "Paste the Campaign URL to the browser and press the Enter button",
-		"2": "Click on the Subscribe button",
-		"3": "Enter the reserved PIN code",
-		"4": "Click on the Confirm button",
-		"5": "Pay attention to the error on the Home Page",
-		"6": "Attached Video/ScreenShots"
-	},
-	"Actual result": "The error pop up with text: ...  is displayed on the Home Page",
-	"Expected result": "Home Page is displayed in subscribe state without any pop ups"
-},
-
-{
-	"Bug_id": "2",
-	"Summary": "[PR][PK Jazz][3G] Phone number is not pre-field after Campaign URL is pasted into the browser",
-	"Priority": "High",
-	"Severity": "Major",
-	"Environment": "The issue was found on the PR",
-	"Preconditions": 
-	{
-		"1": "3G connection is used",
-		"2": "Browser caches/ cookies are cleared, user is deleted from DB and billing"
-	},
-	"Steps to reproduce":
-	{
-		"1": "Paste the Campaign URL to the browser and press the Enter button",
-		"2": "Pay attention that the phone number is not pre-field after Campaign URL is pasted into the browser",
-		"3": "Attached Video/ScreenShots"
-	},
-	"Actual result": "Phone number is not pre-field after Campaign URL is pasted into the browser with 3G connection",
-	"Expected result": "Phone number is successfully pre-field after Campaign URL is pasted into the browser with 3G connection"
-},
-
-{
-	"Bug_id": "3",
-	"Summary": "[PROD][PL T-Mobile] Affiliate Log is not displayed in DB after successful subscribtoion",
-	"Priority": "High",
-	"Severity": "Critical",
-	"Environment": "The issue was found on the PROD",
-	"Preconditions": 
-	{
-		 "1": "The user is in subscribe state",
-		 "2": "DBeaver programm is opened"
-	},
-	"Steps to reproduce":
-	{
-		 "1": "Open the b_process DB table",
-		 "2": "Enter client_user = 'msisdn' or provider_user = 'msisdn' to the search field and press Enter",
-		 "3": "Pay attention that the subscribtion status is successful",
-		 "4": "Open the Affiliate Log DB table",
-		 "5": "Enter user_msisdn = 'msisdn to the search field and press Enter",
-		 "6": "Pay attention that Affiliate log is not displayed",
-		 "7": "Attached Video/ScreenShots"
-	},
-	"Actual result": "Affiliate Log is not displayed in DB after successful subscribtoion",
-	"Expected result": "Affiliate Log is successfully displayed in DB after successful subscribtoion"
+  "Bug_Reports": [
+    {
+      "Bug_id": "1",
+      "Summary": "[PROD] The error pop up is displayed on the Home Page after the Confirm button is clicked",
+      "Priority": "High",
+      "Severity": "Blocker",
+      "Environment": "The issue was found on the STAGE, but reproduced on the PROD",
+      "Preconditions": {
+        "1": "Browser caches/ cookies are cleared, user is deleted from DB and billing",
+        "2": "3G connection is used"
+      },
+      "Steps to reproduce": {
+        "1": "Paste the Campaign URL to the browser and press the Enter button",
+        "2": "Click on the Subscribe button",
+        "3": "Enter the reserved PIN code",
+        "4": "Click on the Confirm button",
+        "5": "Pay attention to the error on the Home Page",
+        "6": "Attached Video/ScreenShots"
+      },
+      "Actual result": "The error pop up with text: ...  is displayed on the Home Page",
+      "Expected result": "Home Page is displayed in subscribe state without any pop ups"
+    },
+    {
+      "Bug_id": "2",
+      "Summary": "[PR][PK Jazz][3G] Phone number is not pre-field after Campaign URL is pasted into the browser",
+      "Priority": "High",
+      "Severity": "Major",
+      "Environment": "The issue was found on the PR",
+      "Preconditions": {
+        "1": "3G connection is used",
+        "2": "Browser caches/ cookies are cleared, user is deleted from DB and billing"
+      },
+      "Steps to reproduce": {
+        "1": "Paste the Campaign URL to the browser and press the Enter button",
+        "2": "Pay attention that the phone number is not pre-field after Campaign URL is pasted into the browser",
+        "3": "Attached Video/ScreenShots"
+      },
+      "Actual result": "Phone number is not pre-field after Campaign URL is pasted into the browser with 3G connection",
+      "Expected result": "Phone number is successfully pre-field after Campaign URL is pasted into the browser with 3G connection"
+    },
+    {
+      "Bug_id": "3",
+      "Summary": "[PROD][PL T-Mobile] Affiliate Log is not displayed in DB after successful subscribtoion",
+      "Priority": "High",
+      "Severity": "Critical",
+      "Environment": "The issue was found on the PROD",
+      "Preconditions": {
+        "1": "The user is in subscribe state",
+        "2": "DBeaver programm is opened"
+      },
+      "Steps to reproduce": {
+        "1": "Open the b_process DB table",
+        "2": "Enter client_user = 'msisdn' or provider_user = 'msisdn' to the search field and press Enter",
+        "3": "Pay attention that the subscribtion status is successful",
+        "4": "Open the Affiliate Log DB table",
+        "5": "Enter user_msisdn = 'msisdn to the search field and press Enter",
+        "6": "Pay attention that Affiliate log is not displayed",
+        "7": "Attached Video/ScreenShots"
+      },
+      "Actual result": "Affiliate Log is not displayed in DB after successful subscribtoion",
+      "Expected result": "Affiliate Log is successfully displayed in DB after successful subscribtoion"
+    },
+    {
+      "Bug_id": "4",
+      "Summary": "[PROD][AT Drei] 500 error is displayed after attempt to unsubscribe from My Account page",
+      "Priority": "High",
+      "Severity": "Critical",
+      "Environment": "The issue was found on the PROD",
+      "Preconditions": {
+        "1": "The user is in subscribe state",
+        "2": "The user is in My Account page"
+      },
+      "Steps to reproduce": {
+        "1": "Click on the unsubscribe link",
+        "2": "Unsub pop up with the 'Are you sure you want to unsubscribe?' message with two buttons YES/NO is displayed",
+        "3": "Click on the 'YES' button",
+        "4": "Pay attention that the 500 error is displayed after attempt to unsubscribe from My Account page",
+        "5": "Attached Video/ScreenShots"
+      },
+      "Actual result": "500 error is displayed after attempt to unsubscribe from My Account page",
+      "Expected result": "My Account page in unsubscribe state successfully displayed"
+    }
+  ]
 }
-
-{
-	"Bug_id": "4",
-	"Summary": "[PROD][AT Drei] 500 error is displayed after attempt to unsubscribe from My Account page",
-	"Priority": "High",
-	"Severity": "Critical",
-	"Environment": "The issue was found on the PROD",
-	"Preconditions": 
-	{
-		 "1": "The user is in subscribe state",
-		 "2": "The user is in My Account page"
-	},
-	"Steps to reproduce":
-	{
-		 "1": "Click on the unsubscribe link",
-		 "2": "Unsub pop up with the 'Are you sure you want to unsubscribe?' message with two buttons YES/NO is displayed",
-		 "3": "Click on the 'YES' button",
-		 "4": "Pay attention that the 500 error is displayed after attempt to unsubscribe from My Account page",
-		 "5": "Attached Video/ScreenShots"
-	},
-	"Actual result": "500 error is displayed after attempt to unsubscribe from My Account page",
-	"Expected result": "My Account page in unsubscribe state successfully displayed"
-}
-
